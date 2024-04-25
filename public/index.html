@@ -6,14 +6,130 @@
     <title>Furkan Soylu</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Allura&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
-    <link href="./css/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="../input.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container">
-        <h1 class="text-3xl font-bold font-garamond text-txt-animate">
-            Welcome
-        </h1>
+    <header>
+        <div class="bg-main-color-one p-0">
+            <div class="container">
+                <div class="header-wrapper py-4 px-2 lg:p-5 lg:justify-around">
+                    <div class="grid grid-cols-2 lg:grid-cols-3">
+                        <div class="logo-wrapper hidden lg:flex justify-center items-center h-full">
+                            <a href="#">
+                                <img src="./img/logo.svg" alt="user logo">
+                            </a>
+                        </div>
+                        <div class="text-wrapper box-border hidden lg:flex items-center justify-center">
+                            <div class="text-main-color-one text-center font-garamond text-font_sml_wlc lg:text-font_wlc tracking-wide w-full animate-ping relative">
+                                Welcome
+                            </div>
+                        </div>
+                        <div class="signature-wrapper box-border flex items-center justify-center h-full">
+                            <div class="text-white signature font-allura font-medium not-italic text-font_sign">
+                                Furkan <br> Soylu
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-end pr-10 lg:hidden z-30">
+                            <button class="navbar-toggler bg-contain bg-no-repeat text-2xl cursor-pointer" type="button">
+                                <a href="#">
+                                    <img src="./img/icon/hamburger.svg" alt="hamburger menu">
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navbar hidden lg:flex bg-nav-25 z-20 sticky top-0">
+        <div class="container h-full">
+            <div class="grid grid-cols-1">
+                <ul class="navbar-items-wrapper font-rubik font-normal lg:flex lg:items-center lg:justify-center lg:space-x-8 lg:h-12">
+                    <li class="nav-item">
+                        <a class="nav-link text-main-color-two" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white hover:text-main-color-two" aria-current="page" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white hover:text-main-color-two" aria-current="page" href="#">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white hover:text-main-color-two" aria-current="page" href="#">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white hover:text-main-color-two" aria-current="page" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-menu fixed lg:hidden top-0 h-screen w-full z-50">
+        <div class="grid grid-cols-1">
+            <div class="content flex">
+                <ul class="navbar-items-wrapper font-rubik font-normal list-none block w-1/2 h-full justify-start items-start space-y-6 p-4">
+                    <li class="nav-item pt-2">
+                        <a class="nav-link text-main-color-two" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item pt-2">
+                        <a class="nav-link text-white  hover:text-main-color-two" aria-current="page" href="#">About</a>
+                    </li>
+                    <li class="nav-item pt-2">
+                        <a class="nav-link text-white hover:text-main-color-two" aria-current="page" href="#">Education</a>
+                    </li>
+                    <li class="nav-item pt-2">
+                        <a class="nav-link text-white hover:text-main-color-two" aria-current="page" href="#">Skills</a>
+                    </li>
+                    <li class="nav-item pt-2">
+                        <a class="nav-link text-white hover:text-main-color-two" aria-current="page" href="#">Contact</a>
+                    </li>
+                </ul>
+                <div class="close-btn-wrapper flex right-0 h-screen w-full">
+                    <div class="close flex w-8 h-8 mt-4 p-2 object-contain items-center justify-center hover:bg-close-btn hover:rounded-lg hover:border-solid hover:border-2 hover:border-white">
+                        <a href="#">
+                            <img src="./img/icon/close.svg" alt="close icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <section class="home bg-gradient-to-r from-main-color-one to-white text-white flex min-h-screen font-rubik items-center" id="home">
+        <div class="container">
+            <div class="grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 items-center justify-center pl-4">
+                <div class="home-content max-w-sm lg:max-w-xl order-2 lg:order-1">
+                    <div class="home-heading text-sect_mobile_head lg:text-sect_head font-medium leading-relaxed mx-6 lg:mx-0">
+                        Hi, I'm <span>Furkan Soylu</span>
+                    </div>
+                    <div class="section-text relative">
+                        <h3 class="text-sect_mobile_text lg:text-sect_text font-bold text-transparent mx-6 lg:mx-0">Frontend Developer</h3>
+                    </div>
+                    <p class="text-sect_mobile_p lg:text-sect_p leading-normal w-4/5 lg:w-full mt-4 lg:mt-8 mx-6 lg:mx-0 mb-7 lg:mb-14">I work passionately with technologies such as React, HTML, CSS and JavaScript. I constantly improve myself and follow the latest technological trends in my projects to produce creative and user-oriented solutions.</p>
+                    <div class="btn-all-items flex relative justify-around lg:justify-between w-auto lg:w-100 h-16">
+                        <div class="btn-wrapper relative inline-flex justify-center items-center no-underline text-font_mobile_btn lg:text-font_btn text-main-color-one font-semibold tracking-widest w-32 lg:w-52 h-12 lg:h-full bg-main-color-two border-2 border-solid border-main-color-two rounded-xl z-20 overflow-hidden hover:bg-main-color-one hover:text-main-color-two hover:duration-700">
+                            <a href="#" class="btn-content">Hire Me</a>
+                        </div>
+                        <div class="btn-wrapper relative inline-flex justify-center items-center no-underline text-font_mobile_btn lg:text-font_btn text-main-color-two font-semibold tracking-widest w-32 lg:w-52 h-12 lg:h-full bg-main-color-one border-2 border-solid border-main-color-two rounded-xl z-20 overflow-hidden hover:bg-main-color-two hover:text-main-color-one hover:duration-700">
+                            <a href="#" class="btn-content">Let's Talk</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="user-wrapper w-full relative order-1 lg:order-2">
+                    <div class="img-wrapper bg-cover bg-center">
+                        <img class="rounded-3xl" src="./img/home/user.jpg" alt="user">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./js/app.js"></script>
 </body>
 </html>
